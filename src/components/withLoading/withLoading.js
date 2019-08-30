@@ -3,8 +3,8 @@ import React from "react";
 import hoistNonReactStatic from "hoist-non-react-statics";
 import Spinner from "../Spinner/Spinner";
 
-const withLoading = comp => {
-    const LoadingComponent = props => {
+const withLoading = (Comp) => {
+    const LoadingComponent = (props) => {
         const { isLoading } = props;
 
         if (isLoading) {
@@ -17,17 +17,17 @@ const withLoading = comp => {
             );
         }
 
-        return <comp {...props} />;
+        return <Comp {...props} />;
     }
 
     LoadingComponent.propTypes = {
         isLoading: PropTypes.bool.isRequired
     };
 
-    LoadingComponent.displayName = `withLoading(${comp.displayName ||
-        comp.name})`;
+    LoadingComponent.displayName = `withLoading(${Comp.displayName ||
+        Comp.name})`;
 
-    return hoistNonReactStatic(LoadingComponent, comp);
+    return hoistNonReactStatic(LoadingComponent, Comp);
 };
 
 export default withLoading;

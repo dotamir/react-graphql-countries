@@ -2,7 +2,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
-import PageLoader from "components/PageLoader/PageLoader";
+import PageLoader from '../components/PageLoader/PageLoader';
 
 const PageLoadable = (opts) => {
     return Loadable(
@@ -13,10 +13,10 @@ const PageLoadable = (opts) => {
             opts
         )
     );
-}
+};
 
 const AsyncHome = PageLoadable({
-    loader: () => import("containers/Home/HomeContainer")
+    loader: () => import("../containers/Home/HomeContainer")
 });
 
 export default function getRoutes() {

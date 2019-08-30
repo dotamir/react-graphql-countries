@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import "./spinner.scss";
 
-const Spinner = (props) => {
+export default function Spinner(props) {
     const { className, size, color } = props;
 
     return (

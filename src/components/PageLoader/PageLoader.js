@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import Spinner from "../Spinner/Spinner";
 
-const PageLoader = props => {
+export default function PageLoader(props) {
     const { isLoading, error, pastDelay, timedOut } = props;
 
     if (isLoading) {
@@ -51,5 +51,3 @@ PageLoader.propTypes = {
     pastDelay: PropTypes.bool.isRequired,
     error: PropTypes.bool.isRequired
 };
-
-export default PageLoader;
