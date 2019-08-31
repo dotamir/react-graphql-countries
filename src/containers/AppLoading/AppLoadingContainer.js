@@ -24,6 +24,7 @@ const AppLoadingContainer = (props) => {
         <main>
             <div className='loading-container text-center'>
                 <Spinner />
+                <p>App is loading...</p>
             </div>
         </main>
     )
