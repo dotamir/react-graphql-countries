@@ -9,6 +9,8 @@ import AppContainer from "./containers/App/AppContainer";
 import { ScrollContext } from "react-router-scroll-4";
 import { createBrowserHistory } from 'history';
 import * as serviceWorker from './serviceWorker';
+import { ApolloProvider } from '@apollo/react-hooks';
+import client from './ApolloClient';
 import './styles/styles.scss';
 
 const history = createBrowserHistory();
@@ -24,15 +26,17 @@ const store = createStore(
 );
 
 ReactDOM.render(
-    <Provider store={store}>
-        <ConnectedRouter history={history}>
-            <>
-                <ScrollContext>
-                    <AppContainer />
-                </ScrollContext>
-            </>
-        </ConnectedRouter>
-    </Provider>,
+    <ApolloProvider client={client}>
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
+                <>
+                    <ScrollContext>
+                        <AppContainer />
+                    </ScrollContext>
+                </>
+            </ConnectedRouter>
+        </Provider>
+    </ApolloProvider>,
     document.getElementById("root")
 );
 
