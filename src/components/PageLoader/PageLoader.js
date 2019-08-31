@@ -46,8 +46,8 @@ export default function PageLoader(props) {
 }
 
 PageLoader.propTypes = {
-    isLoading: PropTypes.bool.isRequired,
-    timedOut: PropTypes.bool.isRequired,
-    pastDelay: PropTypes.bool.isRequired,
-    error: PropTypes.bool.isRequired
+    isLoading: PropTypes.bool,
+    timedOut: PropTypes.bool,
+    pastDelay: PropTypes.bool,
+    error: PropTypes.bool
 };
