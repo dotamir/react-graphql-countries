@@ -10,13 +10,8 @@ const GET_COUNTRY_DETAILS = gql`
         country(code: $code) {
             name
             emoji
-            native
             phone
             currency
-            languages {
-                name
-                native
-            }
             continent {
                 name
             }
@@ -38,7 +33,7 @@ const CountryContainer = props => {
             <>
                 <div className='loading-container text-center'>
                     <Spinner />
-                    <p>Fetching countries...</p>
+                    <p>Fetching country details...</p>
                 </div>
             </>
         )
