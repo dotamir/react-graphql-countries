@@ -9,6 +9,7 @@ import AppContainer from "./containers/App/AppContainer";
 import { ScrollContext } from "react-router-scroll-4";
 import { createBrowserHistory } from 'history';
 import * as serviceWorker from './serviceWorker';
+import './styles/styles.scss';
 
 const history = createBrowserHistory();
 const appReducer = combineReducers({ ...reducers, router: connectRouter(history) });
