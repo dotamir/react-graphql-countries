@@ -1,5 +1,4 @@
 import React from "react";
-import withLoading from "../../components/withLoading/withLoading";
 
 const Home = () => {
     return (
@@ -9,4 +8,4 @@ const Home = () => {
     );
 };
 
-export default withLoading(Home);
+export default Home;
