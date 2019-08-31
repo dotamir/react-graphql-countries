@@ -21,12 +21,16 @@ const AsyncHome = PageLoadable({
 const AsyncCountries = PageLoadable({
     loader: () => import('../containers/Countries/CountriesContainer')
 });
+const AsyncCountry = PageLoadable({
+    loader: () => import('../containers/Country/CountryContainer')
+});
 
 export default function getRoutes() {
     return (
         <Switch>
             <Route path='/' exact={true} component={AsyncHome} />
-            <Route path='/countries' component={AsyncCountries} />
+            <Route path='/countries' exact={true} component={AsyncCountries} />
+            <Route path='/countries/:code' component={AsyncCountry} />
         </Switch>
     )
 }

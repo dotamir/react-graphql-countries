@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Table from 'reactstrap/lib/Table';
 import Container from 'reactstrap/lib/Container';
+import { Link } from 'react-router-dom';
 
 const Countries = (props) => {
     const { countries } = props;
@@ -17,6 +18,7 @@ const Countries = (props) => {
                             <th>Code</th>
                             <th>Continent</th>
                             <th>Flag</th>
+                            <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,6 +29,9 @@ const Countries = (props) => {
                                 <td>{code}</td>
                                 <td>{continent.name}</td>
                                 <td>{emoji}</td>
+                                <td>
+                                    <Link to={`/countries/${code}`}>Details</Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>

@@ -30,7 +30,7 @@ const CountriesContainer = _props => {
             </>
         )
     };
-    
+
     if (error) return <p>Error :(</p>;
     
     return (
