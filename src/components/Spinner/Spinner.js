@@ -31,9 +31,9 @@ export default function Spinner(props) {
 };
 
 Spinner.propTypes = {
-    color: PropTypes.string.isRequired,
+    color: PropTypes.string,
     size: PropTypes.number,
-    className: PropTypes.string.isRequired
+    className: PropTypes.string
 };
 
 Spinner.defaultProps = {

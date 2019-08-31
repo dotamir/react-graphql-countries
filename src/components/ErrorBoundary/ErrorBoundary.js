@@ -6,7 +6,7 @@ import { Container } from "reactstrap";
 export default class ErrorBoundary extends Component {
     static propTypes = {
         children: PropTypes.any.isRequired,
-        location: PropTypes.objectOf.isRequired
+        location: PropTypes.object.isRequired
     };
 
     state = {
