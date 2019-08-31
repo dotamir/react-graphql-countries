@@ -20,7 +20,17 @@ const CountriesContainer = _props => {
         }
     `);
 
-    if (loading) return <Spinner />;
+    if (loading) {
+        return (
+            <>
+                <div className='loading-container text-center'>
+                    <Spinner />
+                    <p>Fetching countries...</p>
+                </div>
+            </>
+        )
+    };
+    
     if (error) return <p>Error :(</p>;
     
     return (
