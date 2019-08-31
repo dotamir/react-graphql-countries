@@ -23,7 +23,7 @@ const Countries = (props) => {
                     </thead>
                     <tbody>
                         {countries.map(({ name, native, code, continent, emoji }) => (
-                            <tr>
+                            <tr key={code}>
                                 <td>{name}</td>
                                 <td>{native}</td>
                                 <td>{code}</td>
